@@ -28,9 +28,14 @@ function getFrage($conn, $frageId) {
     }
 }
 
+// Initialize array to store selected answers
+$_SESSION['selectedAnswers'] = $_SESSION['selectedAnswers'] ?? [];
+
 // Handle form submissions for Weiter and Zurück buttons
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST["weiter"])) {
+        // Save selected answer
+        $_SESSION['selectedAnswers'][$_SESSION['frageId']] = $_POST['antwort'];
         $_SESSION['frageId'] = ($_SESSION['frageId'] ?? 1) + 1;
     } elseif (isset($_POST["zurueck"]) && $_SESSION['frageId'] > 1) {
         $_SESSION['frageId']--;
@@ -39,6 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $frageId = $_SESSION['frageId'] ?? 1; // Start with Frage 1 if not set
 $frageText = getFrage($conn, $frageId);
+
+// Get selected answer if available
+$selectedAnswer = $_SESSION['selectedAnswers'][$frageId] ?? null;
 
 // Close the database connection when done
 $conn->close();
@@ -61,59 +69,45 @@ $conn->close();
         </div>
 
         <div class="container bg-info" style="height: 90%;">
-			<div class="row justify-content-center">
-				<p class="p-1">Willkommen zur Testfragen-Seite! Der Name ist: <span id="displayName"></span></p>
-				<p class="">Der Token ist: <span id="displayToken"></span></p>
-			</div>
-			<form method="post" action="">
+            <div class="row justify-content-center">
+                <p class="p-1">Willkommen zur Testfragen-Seite! Der Name ist: <span id="displayName"></span></p>
+                <p class="">Der Token ist: <span id="displayToken"></span></p>
+            </div>
+            <form method="post" action="">
             <div class="container border rounded-1 bg-danger" style="height: 40%;">
-				<p class="pt-3">+++FRAGE+++</p>
+                <p class="pt-3">+++FRAGE+++</p>
                 <p id="frageText"><?php echo $frageText; ?></p>
             
                 <p>1,2,3,4,5 als button zum auswählen</p>
-				<div class="row justify-content-center">
-					<div class="col-auto">
-						<input type="radio" class="btn-check" name="options" id="option1" value="1" autocomplete="off">
-						<label class="btn btn-outline-warning" for="option1">1</label>
-					</div>
-					<div class="col-auto">
-						<input type="radio" class="btn-check" name="options" id="option2" value="2" autocomplete="off">
-						<label class="btn btn-outline-warning" for="option2">2</label>
-					</div>
-					<div class="col-auto">
-						<input type="radio" class="btn-check" name="options" id="option3" value="3" autocomplete="off">
-						<label class="btn btn-outline-warning" for="option3">3</label>
-					</div>
-					<div class="col-auto">
-						<input type="radio" class="btn-check" name="options" id="option4" value="4" autocomplete="off">
-						<label class="btn btn-outline-warning" for="option4">4</label>
-					</div>
-					<div class="col-auto">
-						<input type="radio" class="btn-check" name="options" id="option5" value="5" autocomplete="off">
-						<label class="btn btn-outline-warning" for="option5">5</label>
-					</div>
-				</div>
+                <div class="row justify-content-center">
+                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                    <div class="col-auto">
+                        <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo "checked"; ?>>
+                        <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                    </div>
+                    <?php endfor; ?>
+                </div>
                 <p></p>
-				<div class="row justify-content-center">
-					<div class="col-auto">
-      					<button type="submit" class="btn btn-primary" name="zurueck">Zurück</button>
-                	</div>
-                	<div class="col-auto">
-                    	<button type="submit" class="btn btn-primary" name="weiter">Weiter</button>
-					</div>
-				</div>
+                <div class="row justify-content-center">
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary" name="zurueck">Zurück</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary" name="weiter">Weiter</button>
+                    </div>
+                </div>
                 <p id="frageCounter"></p>
             </div>
-			</form>
+            </form>
         </div>
-		
+        
     </div>
         <script>
         // Auslesen des Namens und des Tokens aus den URL-Parametern
         const urlParams = new URLSearchParams(window.location.search);
         const name = urlParams.get('name');
         const token = urlParams.get('token');
-			
+            
         // Anzeigen des Namens und des Tokens
         document.getElementById('displayName').innerText = name;
         document.getElementById('displayToken').innerText = token;

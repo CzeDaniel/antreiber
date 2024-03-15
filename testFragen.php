@@ -24,8 +24,8 @@ if ($conn->connect_error) {
 $selectedAnswer = null;
 
 // Function to get a question from the database based on the given question ID
-function getFrage($conn, $frageId) {
-    $sql = "SELECT * FROM fragestellung WHERE id = $frageId";
+function getFrage($conn) {
+    $sql = "SELECT * FROM fragestellung WHERE id <= 50";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {
@@ -98,13 +98,7 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Testfragen</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            background-color: black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container text-center border bg-danger" style="height: 100%;">

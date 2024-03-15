@@ -24,8 +24,8 @@ if ($conn->connect_error) {
 $selectedAnswer = null;
 
 // Function to get a question from the database based on the given question ID
-function getFrage($conn) {
-    $sql = "SELECT * FROM fragestellung WHERE id <= 50";
+function getFrage($conn, $frageId) {
+    $sql = "SELECT * FROM fragestellung WHERE id = $frageId <= 50";
     $result = $conn->query($sql);
 
     if ($result && $result->num_rows > 0) {

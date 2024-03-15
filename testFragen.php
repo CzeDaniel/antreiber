@@ -7,9 +7,9 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Assuming you have a database with name 'your_database' and a table named 'fragen'
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "localhost:3306";
+$username = "antreiber_admin";
+$password = "tiP#3454oRZunhron";
 $database = "antreibertest";
 
 // Create connection

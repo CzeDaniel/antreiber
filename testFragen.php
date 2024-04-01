@@ -113,82 +113,81 @@ $conn->close();
     </script>
 </head>
 <body>
-    <?php
-    // Your PHP code...
-    $frageBoolean = ($_SESSION['frageId'] ?? 1) <= 50; // Set to true if there are more questions to answer, false otherwise
-    // Rest of your PHP code...
-    ?>
-    <div class="header w3-round-large">
-        <h1>Antreibertest - Schnell und kostenlos testen!</h1>
-    </div>
-
-
     <div class="row">
-        <div class="card w3-round-large">
-            <div class="w3-row">
-                <div class="w3-display-container w3-center w3-mobile">
-                    <h2>Willkommen zur Testfragen-Seite!</h2>
-                    <p>Der Name ist: <span id="displayName"></span></p>
-                    <p>Der Token ist: <span id="displayToken"></span></p>
-                    <form method="post" action="">        
+        <?php
+        // Your PHP code...
+        $frageBoolean = ($_SESSION['frageId'] ?? 1) <= 50; // Set to true if there are more questions to answer, false otherwise
+        // Rest of your PHP code...
+        ?>
+        <div class="header w3-round-large">
+            <h1>Antreibertest - Schnell und kostenlos testen!</h1>
+        </div>
+
+
+        <div class="row">
+            <div class="card w3-round-large">
+                <div class="w3-row">
+                    <div class="w3-display-container w3-center w3-mobile">
+                        <h2>Willkommen zur Testfragen-Seite!</h2>
+                        <p>Der Name ist: <span id="displayName"></span></p>
+                        <p>Der Token ist: <span id="displayToken"></span></p>
+                        <form method="post" action="">        
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
             
     
-    <?php if ($frageBoolean) : ?>
-        <!-- Show content for answering questions -->
-        <div class="row">
-            <div class="card w3-round-large">
-              <div class="w3-row">
-                <div class="w3-center w3-round w3-container">
-                    <p>Frage <?php echo $frageId; ?>/50</p>
-                    <p>Kategorie: <?php echo $kategorieText; ?></p>
-                    <p id="frageText"><?php echo $frageText; ?></p>
-                    <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
-                    <form method="post" action="">
-                        <div class="row justify-content-center">
-                            <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                <div class="col-auto">
-                                    <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
-                                    <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+        <?php if ($frageBoolean) : ?>
+            <!-- Show content for answering questions -->
+            <div class="row">
+                <div class="card w3-round-large">
+                    <div class="w3-row">
+                        <div class="w3-center w3-round w3-container">
+                            <p>Frage <?php echo $frageId; ?>/50</p>
+                            <p>Kategorie: <?php echo $kategorieText; ?></p>
+                            <p id="frageText"><?php echo $frageText; ?></p>
+                            <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
+                            <form method="post" action="">
+                                <div class="row justify-content-center">
+                                    <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                        <div class="col-auto">
+                                            <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
+                                            <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                        </div>
+                                    <?php endfor; ?>
                                 </div>
-                            <?php endfor; ?>
+                                <div class="row justify-content-center">
+                                    <div class="w3-modal-content w3-animate-zoom">
+                                        <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                                    </div>
+                                    <div class="w3-modal-content w3-animate-zoom">
+                                        <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
+                                    </div>
+                                </div>
+                                <p id="frageCounter"></p>
+                            </form>
                         </div>
-                        <div class="row justify-content-center">
+                    <?php else: ?>
+                        <div class="container border rounded-1 bg-danger">                  
                             <div class="w3-modal-content w3-animate-zoom">
-                                <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                                <!--
+                                <form method="post" action="auswertung.php">
+                                    <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
+                                </form>
+                                -->
+                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit">
+                                    <a href="auswertung.php" class="text-white">Test abgeben</a>
+                                </button>
                             </div>
-                            <div class="w3-modal-content w3-animate-zoom">
-                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
-                            </div>
-                        </div>
-                        <p id="frageCounter"></p>
-                    </form>
-                </div>
-            <?php else: ?>
-                <div class="container border rounded-1 bg-danger">
-                    
-                    <div class="w3-modal-content w3-animate-zoom">
-                        <!--
-                        <form method="post" action="auswertung.php">
-                            <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
-                        </form>
-                        -->
-                        
-                        <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit">
-                            <a href="auswertung.php" class="text-white">Test abgeben</a>
-                        </button>
+                        </div>   
+                    <?php endif;?>
                     </div>
-                    
-                </div>   
-            <?php endif;?>
+                </div>
+            </div>
+        </div>
+    </div>    
 
-                 
-        </form>
-    </div>
-</div>
 <script>
     // Auslesen des Namens und des Tokens aus den URL-Parametern
     const urlParams = new URLSearchParams(window.location.search);
@@ -198,9 +197,7 @@ $conn->close();
     // Anzeigen des Namens und des Tokens
     document.getElementById('displayName').innerText = name;
     document.getElementById('displayToken').innerText = token;
-
 </script>
-
 
 </body>
 </html>

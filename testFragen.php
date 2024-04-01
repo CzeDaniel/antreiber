@@ -149,7 +149,7 @@ $conn->close();
                             <p id="frageText"><?php echo $frageText; ?></p>
                             <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
                             <form method="post" action="">
-                                <div class="row justify-content-center">
+                                <div class="w3-row justify-content-center">
                                     <?php for ($i = 1; $i <= 5; $i++) : ?>
                                         <div class="col-auto">
                                             <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>

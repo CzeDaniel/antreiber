@@ -1,16 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
     margin: 0;
 }
 
+body {
+  font-family: Arial;
+  padding: 25px;
+  background-color: #a9dddd;
+  background-attachment: fixed;
+}
+
+.header {
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: +static;
+    text-align: center;
+    background: hsla(0, 0%, 100%, 0.9);
+  }
+
+  .header h1 {
+    font-size: 40px;
+    color: black;
+  }
+
+  .header h2 {
+    font-size: 20px;
+    color: black;
+  }
+
 h1 {
-    font-size: 50px;
+    font-size: 35px;
     color: black;
   }
 
 h2 {
-    font-size: 35px;
-    color: whitesmoke;
+    font-size: 25px;
+    color: black;
     text-align: center;
   }
 

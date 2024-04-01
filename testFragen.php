@@ -91,70 +91,116 @@ $conn->close();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Testfragen</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="style.css">
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
+    <title>Testfragen</title>
+  
+
+    <script>
+        console.log('script load ============')
+        function gotoAnswer() {
+            console.log('click go to answer button ============')
+            window.location.href = 'auswertung.php';
+        }
+    </script>
 </head>
 <body>
-    <div class="container text-center border bg-danger" style="height: 100%;">
-        <div class="container bg-primary" style="height: 10%;">
-            <h1 class="p-4">Antreibertest - Schnell und kostenlos testen!</h1>
-        </div>
+    <?php
+    // Your PHP code...
+    $frageBoolean = ($_SESSION['frageId'] ?? 1) <= 50; // Set to true if there are more questions to answer, false otherwise
+    // Rest of your PHP code...
+    ?>
+    <div class="header w3-round-large">
+        <h1>Antreibertest - Schnell und kostenlos testen!</h1>
+    </div>
 
-        <div class="container bg-info" style="height: 90%;">
-            <div class="row justify-content-center">
-                <p class="p-1">Willkommen zur Testfragen-Seite! Der Name ist: <span id="displayName"></span></p>
-                <p class="">Der Token ist: <span id="displayToken"></span></p>
-            </div>
-            <form method="post" action="">
-            <div class="container border rounded-1 bg-danger" style="height: 40%;">
-                <p class="pt-3">+++FRAGE+++</p>
-                <p id="frageText"><?php echo $frageText; ?></p>
-                <p><?php echo $kategorieText; ?></p>
 
-                <p>1,2,3,4,5 als button zum auswählen</p>
-                <div class="row justify-content-center">
-                    <?php for ($i = 1; $i <= 5; $i++): ?>
-                        <div class="col-auto">
-                            <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo "checked"; ?>>
-                            <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
-                        </div>
-                    <?php endfor; ?>
+    <div class="row">
+        <div class="card w3-round-large">
+            <div class="w3-row">
+                <div class="w3-display-container w3-center w3-mobile">
+                    <h2>Willkommen zur Testfragen-Seite!</h2>
+                    <p>Der Name ist: <span id="displayName"></span></p>
+                    <p>Der Token ist: <span id="displayToken"></span></p>
+                    <form method="post" action="">        
                 </div>
-                <div class="row justify-content-center">
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary" name="zurueck">Zurück</button>
-                    </div>
-                    <div class="col-auto">
-                        <button type="submit" class="btn btn-primary" name="weiter">Weiter</button>
-                    </div>
-                </div>
-                <p id="frageCounter"></p>
             </div>
-            </form>
-            <?php if ($allQuestionsAnswered): ?>
-                <div>
-                    <form method="post" action="auswertung.php">
-                        <button type="submit" class="btn btn-primary">Test abgeben</button>
-                    </form>
-                </div>
-            <?php endif; ?>
         </div>
     </div>
-    <script>
-        // Auslesen des Namens und des Tokens aus den URL-Parametern
-        const urlParams = new URLSearchParams(window.location.search);
-        const name = urlParams.get('name');
-        const token = urlParams.get('token');
+            
+    
+    <?php if ($frageBoolean) : ?>
+        <!-- Show content for answering questions -->
+        <div class="row">
+            <div class="card w3-round-large">
+              <div class="w3-row">
+                <div class="w3-center w3-round w3-container">
+                    <p>Frage <?php echo $frageId; ?>/50</p>
+                    <p>Kategorie: <?php echo $kategorieText; ?></p>
+                    <p id="frageText"><?php echo $frageText; ?></p>
+                    <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
+                    <form method="post" action="">
+                        <div class="row justify-content-center">
+                            <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                <div class="col-auto">
+                                    <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
+                                    <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                </div>
+                            <?php endfor; ?>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                            </div>
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
+                            </div>
+                        </div>
+                        <p id="frageCounter"></p>
+                    </form>
+                </div>
+            <?php else: ?>
+                <div class="container border rounded-1 bg-danger">
+                    
+                    <div class="w3-modal-content w3-animate-zoom">
+                        <!--
+                        <form method="post" action="auswertung.php">
+                            <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
+                        </form>
+                        -->
+                        
+                        <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit">
+                            <a href="auswertung.php" class="text-white">Test abgeben</a>
+                        </button>
+                    </div>
+                    
+                </div>   
+            <?php endif;?>
 
-        // Anzeigen des Namens und des Tokens
-        document.getElementById('displayName').innerText = name;
-        document.getElementById('displayToken').innerText = token;
-    </script>
+                 
+        </form>
+    </div>
+</div>
+<script>
+    // Auslesen des Namens und des Tokens aus den URL-Parametern
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const token = urlParams.get('token');
+
+    // Anzeigen des Namens und des Tokens
+    document.getElementById('displayName').innerText = name;
+    document.getElementById('displayToken').innerText = token;
+
+</script>
+
+
 </body>
 </html>

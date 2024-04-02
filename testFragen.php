@@ -133,6 +133,13 @@ $conn->close();
                         <p>Der Token ist: <span id="displayToken"></span></p>
                         <form method="post" action="">        
                     </div>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="row">
+            <div class="card w3-round-large">
+                <div class="w3-row">
                     <div class="w3-display-container w3-center w3-mobile">
                         <?php if ($frageBoolean) : ?>
                             <!-- Show content for answering questions -->

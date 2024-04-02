@@ -65,7 +65,7 @@ ksort($categoryCounts);
                         </tbody>
                     </table>
                 </div>
-            <button class="w3-center w3-button w3-round-large w3-dark-gray" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
+            <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
             </div>
         </div>
     </div>

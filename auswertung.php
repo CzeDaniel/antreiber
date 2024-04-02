@@ -63,21 +63,28 @@ ksort($categoryCounts);
                         </tbody>
                     </table>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-center">
+        <div class="card w3-round-large w3-center">
+            <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-            <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
+                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
                 </div>
             </div>
         </div>
     </div>
             
-            <script>
-                // Function to navigate back to testFragen.php with name and token parameters
-                function goBack() {
-                    const name = '<?php echo $_GET['name']; ?>';
-                    const token = '<?php echo $_GET['token']; ?>';
-                    window.location.href = 'testFragen.php?name=' + encodeURIComponent(name) + '&token=' + encodeURIComponent(token);
-                }
-            </script>
+    <script>
+        // Function to navigate back to testFragen.php with name and token parameters
+        function goBack() {
+            const name = '<?php echo $_GET['name']; ?>';
+            const token = '<?php echo $_GET['token']; ?>';
+            window.location.href = 'testFragen.php?name=' + encodeURIComponent(name) + '&token=' + encodeURIComponent(token);
+        }
+    </script>
             
             <!-- Template to go back to test when finished.
             <script>

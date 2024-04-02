@@ -37,8 +37,6 @@ ksort($categoryCounts);
     <title>Auswertung</title>
 </head>
 <body>
-    <div class="row">
-
     <div class="card w3-round-large w3-center">
         <h1>Auswertung</h1>
         <br>
@@ -98,10 +96,7 @@ ksort($categoryCounts);
                 }
             </script>
             -->       
-
-
-
-        </div>
+        
     </div>
 </body>
 </html>

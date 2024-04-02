@@ -132,18 +132,9 @@ $conn->close();
                         <p>Der Name ist: <span id="displayName"></span></p>
                         <p>Der Token ist: <span id="displayToken"></span></p>
                         <form method="post" action="">        
-                    </div>
-                </div>
-            </div>
-        </div>
-            
-        
-
-        <?php if ($frageBoolean) : ?>
-            <!-- Show content for answering questions -->
-            <div class="row">
-                <div class="card w3-round-large">
-                    <div class="w3-row">
+                    
+                        <?php if ($frageBoolean) : ?>
+                            <!-- Show content for answering questions -->
                         <div class="w3-center w3-round w3-container">
                             <p>Frage <?php echo $frageId; ?>/50</p>
                             <p>Kategorie: <?php echo $kategorieText; ?></p>
@@ -169,8 +160,9 @@ $conn->close();
                                 <p id="frageCounter"></p>
                             </form>
                         </div>
-                    <?php else: ?>                  
-                        <div class="w3-display-container w3-center w3-mobile">
+                    </div>
+                    <div class="w3-display-container w3-center w3-mobile">
+                        <?php else: ?>                  
                             <div class="w3-center w3-modal-content w3-animate-zoom">
                                 <!--
                                 <form method="post" action="auswertung.php">
@@ -181,11 +173,11 @@ $conn->close();
                                     <a href="auswertung.php" class="text-white">Test abgeben</a>
                                 </button>
                             </div> 
-                        </div> 
-                    <?php endif;?>
-                    </div>
+                        <?php endif;?> 
+                    </div>  
                 </div>
             </div>
+        </div>
     </div>    
 
 <script>

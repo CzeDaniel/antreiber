@@ -7,14 +7,14 @@ header("Expires: 0"); // Proxies
 session_start();
 
 // Enable error reporting for debugging
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 // Assuming you have a database with name 'your_database' and a table named 'fragen'
 $servername = "localhost:3306";
-$username = "antreiber_admin";
-$password = "tiP#3454oRZunhron";
+$username = "root";
+$password = "";
 $database = "antreibertest";
 
 // Create connection
@@ -147,20 +147,20 @@ $conn->close();
                 </div>
             </div>
         </div>
-                    
-        <div class="row">
-            <div class="card w3-round-large">
-                <div class="w3-row">
-                    <div class="w3-display-container w3-center w3-mobile">
-                        <?php if ($frageBoolean) : ?>
-                            <!-- Show content for answering questions -->
+            
+    
+        <?php if ($frageBoolean) : ?>
+            <!-- Show content for answering questions -->
+            <div class="row">
+                <div class="card w3-round-large">
+                    <div class="w3-row">
                         <div class="w3-center w3-round w3-container">
                             <p>Frage <?php echo $frageId; ?>/50</p>
                             <p>Kategorie: <?php echo $kategorieText; ?></p>
                             <p id="frageText"><?php echo $frageText; ?></p>
                             <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
                             <form method="post" action="">
-                                <div class="radioBtn w3-center">
+                                <div class="radioBtn w3-row w3-center">
                                     <?php for ($i = 1; $i <= 5; $i++) : ?>
                                         <div class="col-auto">
                                             <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
@@ -179,21 +179,16 @@ $conn->close();
                                 <p id="frageCounter"></p>
                             </form>
                         </div>
-                    </div>
-                    <div class="w3-display-container w3-center w3-mobile">
-                        <?php else: ?>                  
-                            <div class="w3-center w3-modal-content w3-animate-zoom">
-                                <!--
-                                <form method="post" action="auswertung.php">
-                                    <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
+                    <?php else: ?>
+                        <div class="container border rounded-1 bg-danger">                  
+                            <div class="w3-modal-content w3-animate-zoom">
+                                <form method="post" action="">
+                                    <button type="submit" class="btn btn-primary" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
                                 </form>
-                                -->
-                                <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit">
-                                    <a href="auswertung.php" class="text-white">Test abgeben</a>
-                                </button>
-                            </div> 
-                        <?php endif;?> 
-                    </div>  
+                            </div>
+                        </div>   
+                    <?php endif;?>
+                    </div>
                 </div>
             </div>
         </div>

@@ -188,9 +188,9 @@ $conn->close();
                                     <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
                                 </form>
                                 -->
-                                <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit">
-                                    <a href="auswertung.php" class="text-white">Test abgeben</a>
-                                </button>
+                                <form method="post" action="">
+                                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
+                                    </form>
                             </div> 
                         <?php endif;?> 
                     </div>  

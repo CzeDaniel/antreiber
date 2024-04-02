@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Check if all questions are answered
-$allQuestionsAnswered = ($_SESSION['frageId'] ?? 1) > 49;
+$allQuestionsAnswered = ($_SESSION['frageId'] ?? 1) > 50;
 
 // Get current question ID
 $frageId = $_SESSION['frageId'] ?? 1;

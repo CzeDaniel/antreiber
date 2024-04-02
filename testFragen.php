@@ -170,6 +170,7 @@ $conn->close();
                             </form>
                         </div>
                     <?php else: ?>                  
+                        <div class="w3-display-container w3-center w3-mobile">
                             <div class="w3-center w3-modal-content w3-animate-zoom">
                                 <!--
                                 <form method="post" action="auswertung.php">
@@ -179,12 +180,12 @@ $conn->close();
                                 <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit">
                                     <a href="auswertung.php" class="text-white">Test abgeben</a>
                                 </button>
-                            </div>  
+                            </div> 
+                        </div> 
                     <?php endif;?>
                     </div>
                 </div>
             </div>
-        </div>
     </div>    
 
 <script>

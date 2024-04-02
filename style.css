@@ -73,6 +73,8 @@ button {
 
 .radioBtn {
   color: black;
+  display: inline-block;
+  margin-right: 10px; /* Adjust as needed */
 }
 
 .card {

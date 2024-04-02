@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 // Check if all questions are answered
-$allQuestionsAnswered = ($_SESSION['frageId'] ?? 1) > 50;
+$allQuestionsAnswered = ($_SESSION['frageId'] ?? 1) > 49;
 
 // Get current question ID
 $frageId = $_SESSION['frageId'] ?? 1;
@@ -190,7 +190,7 @@ $conn->close();
                                 -->
                                 <form method="post" action="">
                                     <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
-                                    </form>
+                                </form>
                             </div> 
                         <?php endif;?> 
                     </div>  

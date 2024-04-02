@@ -132,7 +132,8 @@ $conn->close();
                         <p>Der Name ist: <span id="displayName"></span></p>
                         <p>Der Token ist: <span id="displayToken"></span></p>
                         <form method="post" action="">        
-                    
+                    </div>
+                    <div class="w3-display-container w3-center w3-mobile">
                         <?php if ($frageBoolean) : ?>
                             <!-- Show content for answering questions -->
                         <div class="w3-center w3-round w3-container">

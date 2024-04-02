@@ -48,7 +48,7 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-                    <table class="w3-center w3-table w3-striped w3-hoverable w3-responsive">
+                    <table class="w3-table-all w3-hoverable">
                         <thead>
                             <tr>
                                 <th scope="col">Kategorie</th>
@@ -65,7 +65,7 @@ ksort($categoryCounts);
                         </tbody>
                     </table>
                 </div>
-            <button class="w3-center w3-btn w3-dark-gray w3-round" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
+            <button class="w3-center w3-button w3-round-large w3-dark-gray" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
             </div>
         </div>
     </div>

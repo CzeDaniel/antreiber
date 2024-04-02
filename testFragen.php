@@ -169,7 +169,7 @@ $conn->close();
                                         <?php endfor; ?>
                                     </div>
                                     <div class="w3-row w3-center">
-                                        <?php if ($frageId > 50) : ?>
+                                        <?php if ($frageId >= 50) : ?>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                             </div>

@@ -48,7 +48,7 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-                    <table class="w3-table-all w3-hoverable">
+                    <table class="w3-table-all w3-hoverable w3-centered">
                         <thead>
                             <tr>
                                 <th scope="col">Kategorie</th>

@@ -75,6 +75,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array_pop($_SESSION['selectedAnswers'][$kategorie]);
         $_SESSION['frageId'] = ($frageId ?? 1) - 1;
     } elseif (isset($_POST["test_abgeben"])) {
+        $selectedAnswer = $_POST['antwort'];
+        $kategorie = getCategory($conn, $frageId);
+        $_SESSION['selectedAnswers'][$kategorie][] = $selectedAnswer;
         // Reset $frageId to 1 when Test Abgeben is clicked
         $_SESSION['frageId'] = 1;
         // Redirect to auswertung.php
@@ -174,7 +177,7 @@ $conn->close();
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                             </div>
                                             <div class="w3-modal-content w3-animate-zoom">
-                                                <button class="w3-right w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
+                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
                                             </div>
                                         <?php else: ?>
                                             <div class="w3-modal-content w3-animate-zoom">

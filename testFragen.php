@@ -154,46 +154,48 @@ $conn->close();
                     <div class="w3-display-container w3-center w3-mobile">
                         <?php if ($frageBoolean) : ?>
                             <!-- Show content for answering questions -->
-                        <div class="w3-center w3-round w3-container">
-                            <p>Frage <?php echo $frageId; ?>/50</p>
-                            <p>Kategorie: <?php echo $kategorieText; ?></p>
-                            <p id="frageText"><?php echo $frageText; ?></p>
-                            <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
-                            <form method="post" action="">
-                                <div class="radioBtn w3-center">
-                                    <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                        <div class="col-auto">
-                                            <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
-                                            <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
-                                        </div>
-                                    <?php endfor; ?>
-                                </div>
-                                <div class="w3-row w3-center">
-                                    <div class="w3-modal-content w3-animate-zoom">
-                                        <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                            <div class="w3-center w3-round w3-container">
+                                <p>Frage <?php echo $frageId; ?>/50</p>
+                                <p>Kategorie: <?php echo $kategorieText; ?></p>
+                                <p id="frageText"><?php echo $frageText; ?></p>
+                                <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
+                                <form method="post" action="">
+                                    <div class="radioBtn w3-row w3-center">
+                                        <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                            <div class="col-auto">
+                                                <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
+                                                <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                            </div>
+                                        <?php endfor; ?>
                                     </div>
-                                    <div class="w3-modal-content w3-animate-zoom">
-                                        <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
+                                    <div class="w3-row w3-center">
+                                        <?php if ($frageId == 50) : ?>
+                                            <div class="w3-modal-content w3-animate-zoom">
+                                                <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
+                                            </div>
+                                        <?php else: ?>
+                                            <div class="w3-modal-content w3-animate-zoom">
+                                                <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                                            </div>
+                                            <div class="w3-modal-content w3-animate-zoom">
+                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
+                                            </div>
+                                        <?php endif; ?>
                                     </div>
-                                </div>
-                                <p id="frageCounter"></p>
-                            </form>
+                                    <p id="frageCounter"></p>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div class="w3-display-container w3-center w3-mobile">
-                        <?php else: ?>                  
+                        <?php else: ?>              
                             <div class="w3-center w3-modal-content w3-animate-zoom">
-                                <!--
-                                <form method="post" action="auswertung.php">
-                                    <button type="submit" class="btn btn-primary"  onclick="gotoAnswer()">Test abgeben</button>
-                                </form>
-                                -->
                                 <form method="post" action="">
                                     <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
                                 </form>
-                            </div> 
+                            </div>
                         <?php endif;?> 
-                    </div>  
+                    </div>
                 </div>
             </div>
         </div>

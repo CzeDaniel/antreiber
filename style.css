@@ -71,10 +71,10 @@ button {
     font-size: 18px;
   }
 
-.radioBtn {
+.radioBtn .col-auto {
   color: black;
   display: inline-block;
-  margin-right: 10px; /* Adjust as needed */
+  margin-right: 10px;
 }
 
 .card {

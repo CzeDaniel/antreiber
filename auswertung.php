@@ -71,7 +71,7 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Eine Seite zurück</button>
+                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@ ksort($categoryCounts);
         function goBack() {
             const name = '<?php echo $_GET['name']; ?>';
             const token = '<?php echo $_GET['token']; ?>';
-            window.location.href = 'testFragen.php?name=' + encodeURIComponent(name) + '&token=' + encodeURIComponent(token);
+            window.location.href = 'index.html';
         }
     </script>
             

@@ -54,6 +54,10 @@ p {
     color: black;
   }
 
+a {
+    text-decoration: none;
+  }
+
 button {
     border: none;
     outline: 0;

@@ -149,15 +149,15 @@ $conn->close();
                             <p id="frageText"><?php echo $frageText; ?></p>
                             <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
                             <form method="post" action="">
-                                <div class="w3-row justify-content-center">
+                                <div class="radioBtn w3-row w3-center">
                                     <?php for ($i = 1; $i <= 5; $i++) : ?>
                                         <div class="col-auto">
                                             <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
-                                            <label class="btn btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                            <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
                                         </div>
                                     <?php endfor; ?>
                                 </div>
-                                <div class="row justify-content-center">
+                                <div class="w3-row w3-center">
                                     <div class="w3-modal-content w3-animate-zoom">
                                         <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                     </div>

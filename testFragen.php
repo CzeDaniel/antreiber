@@ -185,24 +185,15 @@ $conn->close();
                                             </div>
                                         <?php endif; ?>
                                     </div>
-                                    <p id="frageCounter"></p>
                                 </form>
                             </div>
-                        </div>
+                        <?php endif;?>
                     </div>
-                    <div class="w3-display-container w3-center w3-mobile">
-                        <?php else: ?>              
-                            <div class="w3-center w3-modal-content w3-animate-zoom">
-                                <form method="post" action="">
-                                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
-                                </form>
-                            </div>
-                        <?php endif;?> 
-                    </div>
-                </div>
+                </div>     
             </div>
         </div>
-    </div>    
+    </div>
+        
 
 <script>
     // Auslesen des Namens und des Tokens aus den URL-Parametern

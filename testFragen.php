@@ -75,9 +75,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         array_pop($_SESSION['selectedAnswers'][$kategorie]);
         $_SESSION['frageId'] = ($frageId ?? 1) - 1;
     } elseif (isset($_POST["test_abgeben"])) {
-        $selectedAnswer = $_POST['antwort'];
-        $kategorie = getCategory($conn, $frageId);
-        $_SESSION['selectedAnswers'][$kategorie][] = $selectedAnswer;
         // Reset $frageId to 1 when Test Abgeben is clicked
         $_SESSION['frageId'] = 1;
         // Redirect to auswertung.php

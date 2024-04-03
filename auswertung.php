@@ -109,7 +109,7 @@ ksort($categoryCounts);
                     10 - 29 Punkte: förderlich<br>
                     30 - 39 Punkte: möglicherweise beeinträchtigend<br>
                     40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p><br>
-                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
+                    <button class="w3-center w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@ ksort($categoryCounts);
         function goBack() {
             const name = '<?php echo $_GET['name']; ?>';
             const token = '<?php echo $_GET['token']; ?>';
-            window.location.href = 'index.html';
+            window.location.href = '/';
         }
     </script>
             

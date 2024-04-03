@@ -108,7 +108,7 @@ ksort($categoryCounts);
                     <p class="w3-start">Auswertung:<br>
                     10 - 29 Punkte: förderlich<br>
                     30 - 39 Punkte: möglicherweise beeinträchtigend<br>
-                    40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p><br>
+                    40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p>
                     <button class="w3-center w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>

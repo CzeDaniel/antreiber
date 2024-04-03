@@ -186,7 +186,7 @@ $conn->close();
                                 <p id="frageText"><?php echo $frageText; ?></p>
                                 <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
                                 <form method="post" action="">
-                                    <div class="radioBtn w3-row w3-center">
+                                    <div class="radioBtn w3-row w3-center w3-hide-small">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
                                             <div class="col-auto">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
@@ -201,8 +201,8 @@ $conn->close();
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                             </div>
                                             <div class="w3-modal-content w3-animate-zoom">
-                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
-                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
+                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
+                                                <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                             </div>
                                         <?php else: ?>
                                             <div class="w3-modal-content w3-animate-zoom">

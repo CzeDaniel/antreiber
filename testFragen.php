@@ -194,6 +194,14 @@ $conn->close();
                                             </div>
                                         <?php endfor; ?>
                                     </div>
+                                    <div class="w3-row w3-hide-medium w3-hide-large">
+                                        <?php for ($i = 1; $i <= 5; $i++) : ?>
+                                            <div class="col-auto">
+                                                <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
+                                                <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                            </div>
+                                        <?php endfor; ?>
+                                    </div>
                                     <div class="w3-row w3-center">
                                         <?php if ($frageId == 50) : ?>
                                             <div class="w3-modal-content w3-animate-zoom">

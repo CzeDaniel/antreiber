@@ -194,7 +194,7 @@ $conn->close();
                                             </div>
                                         <?php endfor; ?>
                                     </div>
-                                    <div class="radioBtnSmall w3-row w3-hide-medium w3-hide-large">
+                                    <div class="radioBtnSmall w3-row w3-center w3-hide-medium w3-hide-large">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
                                             <div class="col-auto">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>

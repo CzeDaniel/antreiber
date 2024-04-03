@@ -198,20 +198,20 @@ $conn->close();
                                         <?php if ($frageId == 50) : ?>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
-                                                <button class="w3-button w3-light-grey w3-border w3-border-grey w3-round-large w3-display-topleft w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
+                                                <button class="w3-button w3-dark-grey w3-border w3-border-grey w3-round-large w3-display-topleft w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                             </div>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
-                                                <button class="w3-button w3-light-grey w3-border w3-border-grey w3-round-large w3-display-topright w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
+                                                <button class="w3-button w3-dark-grey w3-border w3-border-grey w3-round-large w3-display-topright w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Test abgeben</button>
                                             </div>
                                         <?php else: ?>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
-                                                <button class="w3-button w3-light-grey w3-border w3-border-grey w3-round-large w3-display-topleft w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
+                                                <button class="w3-button w3-dark-grey w3-border w3-border-grey w3-round-large w3-display-topleft w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                             </div>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
-                                                <button class="w3-button w3-light-grey w3-border w3-border-grey w3-round-large w3-display-topright w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="weiter">Weiter</button>
+                                                <button class="w3-button w3-dark-grey w3-border w3-border-grey w3-round-large w3-display-topright w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="weiter">Weiter</button>
                                             </div>
                                         <?php endif; ?>
                                     </div>

@@ -85,7 +85,7 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-                    <div class="w3-left w3-container w3-display-container">
+                    <div class="w3-center-left w3-container w3-display-container">
                     <p>Auswertung:<br>
                     10 - 29 Punkte: förderlich<br>
                     30 - 39 Punkte: möglicherweise beeinträchtigend<br>

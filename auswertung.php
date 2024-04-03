@@ -1,6 +1,20 @@
 <?php
 session_start();
 
+// Assuming you have a database with name 'your_database' and a table named 'fragen'
+$servername = "localhost:3306";
+$username = "antreiber_admin";
+$password = "tiP#3454oRZunhron";
+$database = "antreibertest";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 // Ensure the session data is available
 if (!isset($_SESSION['selectedAnswers'])) {
     header("Location: testFragen.php"); // Redirect if session data is not available
@@ -71,6 +85,10 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
+                    <p>Auswertung:<br>
+                    10 - 29 Punkte: förderlich<br>
+                    30 - 39 Punkte: möglicherweise beeinträchtigend<br>
+                    40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p><br><br>
                     <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>

@@ -77,12 +77,6 @@ button {
   margin-right: 10px;
 }
 
-.radioBtnSmall{
-  color: black;
-  display: inline-block;
-  margin-right: 10px;
-}
-
 .card {
     background-color: hsla(0, 0%, 100%, 0.9);
     padding: 20px;

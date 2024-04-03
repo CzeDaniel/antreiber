@@ -79,6 +79,7 @@ button {
 
 .radioBtnSmall{
   color: black;
+  display: inline-block;
 }
 
 .card {

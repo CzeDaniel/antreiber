@@ -110,7 +110,7 @@ ksort($categoryCounts);
                     30 - 39 Punkte: möglicherweise beeinträchtigend<br>
                     40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p>
                     <button class="w3-center w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
-                    <button class="w3-center w3-button w3-round-large w3-dark-grey w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="weiter">Weiter</button>
+                    <button class="w3-center w3-button w3-round-large w3-dark-grey w3-hide-medium w3-hide-large" style="width:30%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>
         </div>

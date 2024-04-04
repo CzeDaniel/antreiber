@@ -106,11 +106,6 @@ ksort($categoryCounts);
                                 <td colspan="2">
                                     <details>
                                         <summary><?php echo $category . ': ' . $categoryName . ' (' . $count . ' Punkte)'; ?></summary>
-                                        <table>
-                                            <tr>
-                                                <td><?php echo $count; ?></td>
-                                            </tr>
-                                        </table>
                                         <h4>Beschreibung:</h4>
                                         <p><?php echo $categoryBeschreibung ?></p>
                                         <h4>Verhaltensweise:</h4>

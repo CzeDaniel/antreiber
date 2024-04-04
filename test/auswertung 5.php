@@ -1,10 +1,15 @@
 <?php
+// Set cache control headers to prevent caching
+header("Cache-Control: no-cache, no-store, must-revalidate"); // HTTP 1.1
+header("Pragma: no-cache"); // HTTP 1.0
+header("Expires: 0"); // Proxies
+
 session_start();
 
 // Assuming you have a database with name 'your_database' and a table named 'fragen'
 $servername = "localhost:3306";
-$username = "antreiber_admin";
-$password = "tiP#3454oRZunhron";
+$username = "root";
+$password = "";
 $database = "antreibertest";
 
 // Create connection
@@ -46,26 +51,6 @@ ksort($categoryCounts);
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
     <title>Auswertung</title>
@@ -130,12 +115,7 @@ ksort($categoryCounts);
         <div class="card w3-round-large w3-center">
             <div class="w3-center w3-row">
                 <div class="w3-center w3-container w3-display-container">
-                    <p class="w3-start">Auswertung:<br>
-                    10 - 29 Punkte: förderlich<br>
-                    30 - 39 Punkte: möglicherweise beeinträchtigend<br>
-                    40 - 50 Punkte: möglicherweise gesundheitsgefährdend</p>
-                    <button class="w3-center w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Neustart</button>
-                    <button class="w3-center w3-button w3-round-large w3-dark-grey w3-hide-medium w3-hide-large" style="width:30%" type="submit" class="btn btn-primary" onclick="goBack()">Neustart</button>
+                    <button class="w3-center w3-button w3-round-large w3-dark-gray" style="width:20%" type="submit" class="btn btn-primary" onclick="goBack()">Test neu starten</button>
                 </div>
             </div>
         </div>
@@ -144,32 +124,12 @@ ksort($categoryCounts);
     <script>
         // Function to navigate back to testFragen.php with name and token parameters
         function goBack() {
+            <?php unset($_SESSION['selectedAnswers']); ?>
             const name = '<?php echo $_GET['name']; ?>';
             const token = '<?php echo $_GET['token']; ?>';
-            window.location.href = '/';
-        }
-    </script>
+            window.location.href = 'index.html';
             
-            <!-- Template to go back to test when finished.
-            <script>
-                // Function to navigate back to testFragen.php with name and token parameters
-                function goBack() {
-                    const urlParams = new URLSearchParams(window.location.search);
-                    const name = urlParams.get('name');
-                    const token = urlParams.get('token');
-                    
-                    // Check if both name and token are not null or empty
-                    if (name && token) {
-                        const redirectUrl = `testFragen.php?name=${encodeURIComponent(name)}&token=${encodeURIComponent(token)}`;
-                        window.location.href = redirectUrl;
-                    } else {
-                        // Redirect without parameters if name or token is missing
-                        window.location.href = 'testFragen.php';
-                    }
-                }
-            </script>
-            -->       
-        
-    </div>
+        }
+    </script>    
 </body>
 </html>

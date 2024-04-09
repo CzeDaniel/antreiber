@@ -2,9 +2,9 @@
   box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
 }
 
 body {
@@ -15,61 +15,61 @@ body {
 }
 
 .header {
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    position: +static;
-    text-align: center;
-    background: hsla(0, 0%, 100%, 0.9);
-  }
+  padding: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  position: +static;
+  text-align: center;
+  background: hsla(0, 0%, 100%, 0.9);
+}
 
-  .header h1 {
-    font-size: 40px;
-    color: black;
-  }
+.header h1 {
+  font-size: 40px;
+  color: black;
+}
 
-  .header h2 {
-    font-size: 20px;
-    color: black;
-  }
+.header h2 {
+  font-size: 20px;
+  color: black;
+}
 
 h1 {
-    font-size: 35px;
-    color: black;
-  }
+  font-size: 35px;
+  color: black;
+}
 
 h2 {
-    font-size: 25px;
-    color: black;
-    text-align: center;
-  }
+  font-size: 25px;
+  color: black;
+  text-align: center;
+}
 
 .test {
   color: whitesmoke;
 }
 
 p {
-    font-size: 16px;
-    font: Arial;
-    color: black;
-  }
+  font-size: 16px;
+  font: Arial;
+  color: black;
+}
 
 a {
-    text-decoration: none;
-  }
+  text-decoration: none;
+}
 
 button {
-    border: none;
-    outline: 0;
-    display: block;
-    padding: 0px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: inherit;
-    width: 100%;
-    font-size: 18px;
-  }
+  border: none;
+  outline: 0;
+  display: block;
+  padding: 0px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: inherit;
+  width: 100%;
+  font-size: 18px;
+}
 
 .radioBtn .col-auto {
   color: black;
@@ -78,18 +78,18 @@ button {
 }
 
 .card {
-    background-color: hsla(0, 0%, 100%, 0.9);
-    padding: 20px;
-    margin-top: 20px;
-    color: whitesmoke;
-  }
+  background-color: hsla(0, 0%, 100%, 0.9);
+  padding: 20px;
+  margin-top: 10px;
+  color: whitesmoke;
+}
 
 .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
+  content: "";
+  display: table;
+  clear: both;
+}
+
 table {
   color: #000;
 }

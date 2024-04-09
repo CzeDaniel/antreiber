@@ -159,20 +159,6 @@ $conn->close();
         <div class="header w3-round-large">
             <h1>Antreibertest - Schnell und kostenlos testen!</h1>
         </div>
-
-
-        <div class="row">
-            <div class="card w3-round-large">
-                <div class="w3-row">
-                    <div class="w3-display-container w3-center w3-mobile">
-                        <h2>Willkommen zur Testfragen-Seite!</h2>
-                        <p>Der Name ist: <span id="displayName"></span></p>
-                        <p>Der Token ist: <span id="displayToken"></span></p>
-                        <form method="post" action="">        
-                    </div>
-                </div>
-            </div>
-        </div>
                     
         <div class="row">
             <div class="card w3-round-large">
@@ -181,7 +167,6 @@ $conn->close();
                         <?php if ($frageBoolean) : ?>
                             <!-- Show content for answering questions -->
                             <div class="w3-center w3-round w3-container">
-                                <p>Frage <?php echo $frageId; ?>/50</p>
                                 <p>Kategorie: <?php echo $kategorieText; ?></p>
                                 <p id="frageText"><?php echo $frageText; ?></p>
                                 <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
@@ -208,6 +193,9 @@ $conn->close();
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                             </div>
+                                            <div class="w3-modal-content">
+                                                <p class="w3-center">Frage <?php echo $frageId; ?>/50</p>
+                                            </div>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
@@ -216,6 +204,9 @@ $conn->close();
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                                 <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
+                                            </div>
+                                            <div class="w3-modal-content">
+                                                <p class="w3-center">Frage <?php echo $frageId; ?>/50</p>
                                             </div>
                                             <div class="w3-modal-content w3-animate-zoom">
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>

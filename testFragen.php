@@ -167,7 +167,7 @@ $conn->close();
                         <?php if ($frageBoolean) : ?>
                             <!-- Show content for answering questions -->
                             <div class="w3-center w3-round w3-container">
-                                <p>Kategorie: <?php echo $kategorieText; ?></p>
+                                <!-- <p>Kategorie: <?php // echo $kategorieText; ?></p> -->
                                 <p id="frageText"><?php echo $frageText; ?></p>
                                 <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
                                 <form method="post" action="">
@@ -201,16 +201,16 @@ $conn->close();
                                                 <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                             </div>
                                         <?php else: ?>
-                                            <div class="row">
-                                                <div class="w3-modal-content w3-animate-zoom w3-third">
-                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
+                                            <div class="row w3-third">
+                                                <div class="w3-modal-content w3-animate-zoom">
+                                                    <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                                     <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                 </div>
-                                                <div class="w3-animate-zoom w3-third">
-                                                    <p >Frage <?php echo $frageId; ?>/50</p>
+                                                <div class="w3-animate-zoom">
+                                                    <p class="w3-center">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
-                                                <div class="w3-modal-content w3-animate-zoom w3-third">
-                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
+                                                <div class="w3-modal-content w3-animate-zoom">
+                                                    <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
                                                     <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="weiter">Weiter</button>
                                                 </div>
                                             </div>

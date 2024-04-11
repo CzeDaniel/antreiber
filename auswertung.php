@@ -83,8 +83,7 @@ ksort($categoryCounts);
                 <table class="w3-table-all w3-hoverable w3-centered">
                     <thead>
                         <tr>
-                            <th scope="col">Antreibertypen</th>
-                            <th scope="col">Antworten</th>
+                            <th scope="col">Antreibertypen & Punktzahl</th>
                         </tr>
                     </thead>
                     <tbody>

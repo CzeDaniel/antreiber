@@ -93,3 +93,9 @@ button {
 table {
   color: #000;
 }
+
+.back-button {
+  position: absolute;
+  left: 0;
+  transform: translateX(50%);
+}

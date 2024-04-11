@@ -99,3 +99,9 @@ table {
   left: 0;
   transform: translateX(50%);
 }
+
+.further-button {
+  position: absolute;
+  right: 0;
+  transform:  translateX(50%);
+}

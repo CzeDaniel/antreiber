@@ -106,9 +106,9 @@ ksort($categoryCounts);
                                     <details>
                                         <summary><?php echo $category . ': ' . $categoryName . ' (' . $count . ' Punkte)'; ?></summary>
                                         <h4>Beschreibung:</h4>
-                                        <p class="w3-align-left"><?php echo $categoryBeschreibung ?></p>
+                                        <p class="w3-left-align"><?php echo $categoryBeschreibung ?></p>
                                         <h4>Verhaltensweise:</h4>
-                                        <p class="w3-align-left"><?php echo $categoryVerhaltensweise ?></p>
+                                        <p class="w3-left-align"><?php echo $categoryVerhaltensweise ?></p>
                                     </details>
                                 </td>
                             </tr>

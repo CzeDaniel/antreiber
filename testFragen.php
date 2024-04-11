@@ -189,14 +189,14 @@ $conn->close();
                                     <div class="w3-row w3-center">
                                         <?php if ($frageId == 50) : ?>
                                             <div class="w3-center w3-row">
-                                                <div class="w3-modal-content w3-animate-zoom w3-third back-button">
+                                                <div class="w3-animate-zoom w3-third">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-small w3-right" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                 </div>
                                                 <div class="w3-animate-zoom  w3-third">
                                                     <p class="w3-center w3-hide-small">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
-                                                <div class="w3-modal-content w3-animate-zoom w3-third further-button">
+                                                <div class="w3-animate-zoom w3-third">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-left" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-small w3-left" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 </div>

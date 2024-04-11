@@ -188,29 +188,29 @@ $conn->close();
                                     </div>
                                     <div class="w3-row w3-center">
                                         <?php if ($frageId == 50) : ?>
-                                            <div class="w3-center row w3-third">
-                                                <div class="w3-modal-content w3-animate-zoom">
+                                            <div class="w3-center w3-row">
+                                                <div class="w3-modal-content w3-animate-zoom  w3-third">
                                                     <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                                     <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                 </div>
-                                                <div class="w3-animate-zoom">
+                                                <div class="w3-animate-zoom  w3-third">
                                                     <p class="w3-center">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
-                                                <div class="w3-modal-content w3-animate-zoom">
+                                                <div class="w3-modal-content w3-animate-zoom  w3-third">
                                                     <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                     <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 </div>
                                             </div>
                                         <?php else: ?>
-                                            <div class="w3-center row w3-third">
-                                                <div class="w3-modal-content w3-animate-zoom">
+                                            <div class="w3-center w3-row">
+                                                <div class="w3-modal-content w3-animate-zoom w3-third">
                                                     <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="zurueck">Zurück</button>
                                                     <button class="w3-left w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                 </div>
-                                                <div class="w3-animate-zoom">
+                                                <div class="w3-animate-zoom w3-third">
                                                     <p class="w3-center">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
-                                                <div class="w3-modal-content w3-animate-zoom">
+                                                <div class="w3-modal-content w3-animate-zoom w3-third">
                                                     <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-small" style="width:20%" type="submit" name="weiter">Weiter</button>
                                                     <button class="w3-right w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large" style="width:30%" type="submit" name="weiter">Weiter</button>
                                                 </div>
@@ -220,7 +220,6 @@ $conn->close();
                                 </form>
                             </div>
                         <?php endif;?>
-                    
                 </div>     
             </div>
         </div>

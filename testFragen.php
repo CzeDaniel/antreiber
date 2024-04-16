@@ -183,9 +183,7 @@ $conn->close();
                                             <div class="col-auto">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
                                                 <div>
-                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
-                                                    <br>
-                                                    <span>Option <?php echo $i; ?></span>
+                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>                                                    
                                                 </div>
                                             </div>
                                         <?php endfor; ?>

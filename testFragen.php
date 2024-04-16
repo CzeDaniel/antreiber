@@ -168,7 +168,9 @@ $conn->close();
                             <div class="w3-center w3-round w3-container">
                                 <!-- <p>Kategorie: <?php // echo $kategorieText; ?></p> -->
                                 <p id="frageText"><?php echo $frageText; ?></p>
-                                <p>1, 2, 3, 4, 5 als Button zum Auswählen</p>
+                                <p>1 = trifft gar nicht zu
+                                <br>
+                                5 = trifft voll zu</p>
                                 <form method="post" action="">
                                     <div class="radioBtn w3-row w3-center w3-hide-small">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
@@ -180,10 +182,11 @@ $conn->close();
                                     </div>
                                     <div class="radioBtn w3-row w3-center w3-hide-medium w3-hide-large">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                            <div class="col-auto">
-                                                <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
+                                            <div class="col-auto" style="display: inline-block; margin-right: 10px;">
+                                                <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?> disabled>
                                                 <div>
-                                                    <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>"><?php echo $i; ?></label>                                                    
+                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                                    <br>
                                                 </div>
                                             </div>
                                         <?php endfor; ?>

@@ -208,8 +208,8 @@ $conn->close();
                                                 </div>
                                             </div>
                                             <div class="w3-center w3-row w3-hide-medium w3-hide-large">
-                                                    <div class="w3-animate-zoom w3-third">
-                                                        <p class="w3-center w3-hide-small">Frage <?php echo $frageId; ?>/50</p>
+                                                    <div class="w3-animate-zoom">
+                                                        <p class="w3-center w3-hide-medium w3-hide-large">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
                                             <?php else: ?>
                                             <div class="w3-center w3-row">
@@ -230,8 +230,8 @@ $conn->close();
                                                 </div>
                                             </div>
                                                 <div class="w3-center w3-row w3-hide-medium w3-hide-large">
-                                                    <div class="w3-animate-zoom w3-third">
-                                                        <p class="w3-center w3-hide-small">Frage <?php echo $frageId; ?>/50</p>
+                                                    <div class="w3-animate-zoom">
+                                                        <p class="w3-center w3-hide-medium w3-hide-large">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
                                             </div>
                                         <?php endif; ?>

@@ -138,7 +138,7 @@ $conn->close();
     <meta name="theme-color" content="#ffffff">
     <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
-    <title>Testfragen</title>
+    <title>Fragen</title>
   
 
     <script>
@@ -157,7 +157,7 @@ $conn->close();
         // Rest of your PHP code...
         ?>
         <div class="header w3-round-large">
-            <h1>Antreibertest - Schnell und kostenlos testen!</h1>
+            <h1>Antreibertest</h1>
         </div>
                     
         <div class="row">
@@ -204,10 +204,10 @@ $conn->close();
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-small w3-left" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 </div>
                                                 <div class="w3-animate-zoom">
-                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="zurueck">Zurück</button>
+                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-left" style="width:30%" type="submit" name="zurueck">Zurück</button>
                                                 </div>
                                                 <div class="w3-animate-zoom">
-                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-left" style="width:20%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
+                                                    <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 </div>
                                             </div>
                                             <?php else: ?>

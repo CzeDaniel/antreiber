@@ -207,6 +207,10 @@ $conn->close();
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="test_abgeben" onclick="gotoAnswer()">Abgabe</button>
                                                 </div>
                                             </div>
+                                            <div class="w3-center w3-row w3-hide-medium w3-hide-large">
+                                                    <div class="w3-animate-zoom w3-third">
+                                                        <p class="w3-center w3-hide-small">Frage <?php echo $frageId; ?>/50</p>
+                                                </div>
                                             <?php else: ?>
                                             <div class="w3-center w3-row">
                                                 <div class="w3-animate-zoom w3-third">
@@ -223,6 +227,11 @@ $conn->close();
                                                 </div>
                                                 <div class="w3-animate-zoom">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="weiter">Weiter</button>
+                                                </div>
+                                            </div>
+                                                <div class="w3-center w3-row w3-hide-medium w3-hide-large">
+                                                    <div class="w3-animate-zoom w3-third">
+                                                        <p class="w3-center w3-hide-small">Frage <?php echo $frageId; ?>/50</p>
                                                 </div>
                                             </div>
                                         <?php endif; ?>

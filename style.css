@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: Arial;
-  padding: 25px;
+  padding: 12px;
   background-color: #a9dddd;
   background-attachment: fixed;
 }
@@ -90,7 +90,7 @@ button {
 
 .card {
   background-color: hsla(0, 0%, 100%, 0.9);
-  padding: 15px;
+  padding: 10px;
   margin-top: 10px;
   color: whitesmoke;
 }

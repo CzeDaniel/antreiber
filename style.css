@@ -90,7 +90,7 @@ button {
 
 .card {
   background-color: hsla(0, 0%, 100%, 0.9);
-  padding: 20px;
+  padding: 15px;
   margin-top: 10px;
   color: whitesmoke;
 }
@@ -115,4 +115,8 @@ table {
   position: absolute;
   right: 0;
   transform:  translateX(50%);
+}
+
+.status {
+  margin-top: 10px;
 }

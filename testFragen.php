@@ -185,7 +185,7 @@ $conn->close();
                                             <div class="col-auto" style="display: inline-block; margin-right: 4px;">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
                                                 <div>
-                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label disabled>
+                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>" disabled><?php echo $i; ?></label>
                                                     <br>
                                                 </div>
                                             </div>

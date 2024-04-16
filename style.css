@@ -59,6 +59,11 @@ p {
   color: black;
 }
 
+.frageText {
+  font-style: bold;
+  font-size: 18px;
+}
+
 a {
   text-decoration: none;
 }
@@ -77,12 +82,6 @@ button {
 }
 
 .radioBtn .col-auto {
-  color: black;
-  display: inline-block;
-  margin-right: 10px;
-}
-
-.radioBtnSmall .col-auto{
   color: black;
   display: inline-block;
   margin-right: 4px;

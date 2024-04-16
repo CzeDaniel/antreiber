@@ -60,7 +60,7 @@ p {
 }
 
 .frageText {
-  font-style: bold;
+  font-weight: bold;
   font-size: 18px;
 }
 
@@ -84,7 +84,7 @@ button {
 .radioBtn .col-auto {
   color: black;
   display: inline-block;
-  margin-right: 4px;
+  margin-right: 10px;
 }
 
 .card {

@@ -180,9 +180,9 @@ $conn->close();
                                             </div>
                                         <?php endfor; ?>
                                     </div>
-                                    <div class="radioBtnSmall w3-row w3-center w3-hide-medium w3-hide-large">
+                                    <div class="radioBtn w3-row w3-center w3-hide-medium w3-hide-large">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                            <div class="col-auto" style="display: inline-block; margin-right: 10px;">
+                                            <div class="col-auto" style="display: inline-block; margin-right: 4px;">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?> disabled>
                                                 <div>
                                                     <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>

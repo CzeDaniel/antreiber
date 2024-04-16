@@ -85,6 +85,7 @@ button {
   color: black;
   display: inline-block;
   margin-right: 10px;
+  padding-bottom: 2px;
 }
 
 .card {

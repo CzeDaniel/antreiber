@@ -82,6 +82,12 @@ button {
   margin-right: 10px;
 }
 
+.radioBtnSmall .col-auto{
+  color: black;
+  display: inline-block;
+  margin-right: 4px;
+}
+
 .card {
   background-color: hsla(0, 0%, 100%, 0.9);
   padding: 20px;

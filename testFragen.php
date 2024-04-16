@@ -212,10 +212,10 @@ $conn->close();
                                                 <div class="w3-animate-zoom w3-third">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-small w3-left" style="width:30%" type="submit" name="weiter">Weiter</button>
                                                 </div>
-                                                <div class="w3-animate-zoom w3-half">
+                                                <div class="w3-animate-zoom">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-right" style="width:30%" type="submit" name="zurueck">Zurück</button> 
                                                 </div>
-                                                <div class="w3-animate-zoom w3-half">
+                                                <div class="w3-animate-zoom">
                                                     <button class="w3-button w3-round-large w3-dark-gray w3-hide-medium w3-hide-large w3-left" style="width:30%" type="submit" name="weiter">Weiter</button>
                                                 </div>
                                             </div>

@@ -71,9 +71,8 @@ ksort($categoryCounts);
     <title>Auswertung</title>
 </head>
 <body>
-    <div class="card w3-round-large w3-center">
-        <h1>Auswertung</h1>
-        <br>
+    <div class="header w3-round-large">
+        <h1>Ergebnis Antreibertest</h1>
     </div>
 
     <div class="w3-center">

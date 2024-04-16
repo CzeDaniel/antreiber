@@ -168,9 +168,6 @@ $conn->close();
                             <div class="w3-center w3-round w3-container">
                                 <!-- <p>Kategorie: <?php // echo $kategorieText; ?></p> -->
                                 <p class="frageText" id="frageText"><?php echo $frageText; ?></p>
-                                <p>1 = trifft gar nicht zu
-                                <br>
-                                5 = trifft voll zu</p>
                                 <form method="post" action="">
                                     <div class="radioBtn w3-row w3-center w3-hide-small">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>

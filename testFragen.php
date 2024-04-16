@@ -182,7 +182,11 @@ $conn->close();
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
                                             <div class="col-auto">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
-                                                <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                                <div>
+                                                    <label class="w3-button btn-outline-warning w3 radioBtnSmall" for="option<?php echo $i; ?>"><?php echo $i; ?></label>
+                                                    <br>
+                                                    <span>Option <?php echo $i; ?></span>
+                                                </div>
                                             </div>
                                         <?php endfor; ?>
                                     </div>

@@ -179,7 +179,7 @@ $conn->close();
                                     </div>
                                     <div class="radioBtn w3-row w3-center w3-hide-medium w3-hide-large">
                                         <?php for ($i = 1; $i <= 5; $i++) : ?>
-                                            <div class="col-auto" style="display: inline-block; margin-right: 4px;">
+                                            <div class="col-auto" style="margin-right: 4px;">
                                                 <input type="radio" class="btn-check" name="antwort" id="option<?php echo $i; ?>" value="<?php echo $i; ?>" <?php if ($selectedAnswer == $i) echo 'checked'; ?>>
                                                 <div>
                                                     <label class="w3-button btn-outline-warning" for="option<?php echo $i; ?>" disabled><?php echo $i; ?></label>

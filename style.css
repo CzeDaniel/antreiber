@@ -59,6 +59,13 @@ p {
   color: black;
 }
 
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: hsla(0, 0%, 100%, 0.9);
+  margin-top: 20px;
+}
+
 .frageText {
   font-weight: bold;
   font-size: 18px;

@@ -71,6 +71,8 @@ ksort($categoryCounts);
     <title>Auswertung</title>
 </head>
 <body>
+
+    <main>
     <div class="header w3-round-large">
         <h1>Ergebnis Antreibertest</h1>
     </div>
@@ -133,6 +135,17 @@ ksort($categoryCounts);
             </div>
         </div>
     </div>
+    </main>
+
+    <footer>
+		<div class="row">
+			<div class="card w3-round-large">
+				<div class="w3-row w3-center">
+                    <p>©️ Frederic Gritz, Daniel Czeguhn <br> Antreibertest 2024</p>
+				</div>
+			</div>
+		</div>
+	</footer>
             
     <script>
         // Function to navigate back to testFragen.php with name and token parameters

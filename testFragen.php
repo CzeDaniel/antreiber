@@ -150,6 +150,8 @@ $conn->close();
     </script>
 </head>
 <body>
+
+    <main>
     <div class="row">
         <?php
         // Your PHP code...
@@ -232,6 +234,7 @@ $conn->close();
                                                 <div class="w3-center w3-row w3-hide-medium w3-hide-large">
                                                     <div class="w3-animate-zoom">
                                                         <p class="w3-center w3-hide-medium w3-hide-large">Frage <?php echo $frageId; ?>/50</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         <?php endif; ?>
@@ -243,6 +246,17 @@ $conn->close();
             </div>
         </div>
     </div>
+    </main>
+
+    <footer>
+		<div class="row">
+			<div class="card w3-round-large">
+				<div class="w3-row w3-center">
+                    <p>©️ Frederic Gritz, Daniel Czeguhn <br> Antreibertest 2024</p>
+				</div>
+			</div>
+		</div>
+	</footer>
         
 
 <script>

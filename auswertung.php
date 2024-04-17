@@ -176,6 +176,5 @@ ksort($categoryCounts);
             </script>
             -->       
         
-    </div>
 </body>
 </html>

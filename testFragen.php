@@ -154,9 +154,7 @@ $conn->close();
     <main>
     <div class="row">
         <?php
-        // Your PHP code...
         $frageBoolean = ($_SESSION['frageId'] ?? 1) <= 50; // Set to true if there are more questions to answer, false otherwise
-        // Rest of your PHP code...
         ?>
         <div class="header w3-round-large">
             <h1>Antreibertest</h1>

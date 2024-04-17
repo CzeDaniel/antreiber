@@ -9,13 +9,13 @@ html {
 
 body {
   font-family: Arial;
-  padding: 12px;
+  padding: 10px;
   background-color: #a9dddd;
   background-attachment: fixed;
 }
 
 .header {
-  padding: 30px;
+  padding: 10px;
   margin-top: 0px;
   margin-bottom: 10px;
   position: +static;
@@ -59,11 +59,11 @@ p {
   color: black;
 }
 
-.footer {
-  padding: 20px;
+footer {
+  padding: 5px;
   text-align: center;
   background: hsla(0, 0%, 100%, 0.9);
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .frageText {
